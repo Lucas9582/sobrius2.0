@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobrius - Recuperação e Sobriedade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main id="app-container">
+        <!-- Login View -->
+        <section id="login-view" class="view active">
+            <div class="login-content">
+                <div class="logo-container">
+                    <div class="logo-circle">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                            <path d="M12 3L2 12H5V20H19V12H22L12 3Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h1>Sobrius</h1>
+                </div>
+                <p class="motivational-quote">"Um novo começo inicia-se com um simples passo."</p>
+                
+                <form id="login-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                    <button type="button" class="btn btn-outline">Criar Conta</button>
+                    <div class="divider">ou</div>
+                    <button type="button" class="btn btn-google">
+                        <span class="google-icon">G</span> Logar com Google
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Home / Progress View -->
+        <section id="home-view" class="view">
+            <header class="top-bar">
+                <h2>Meu Progresso</h2>
+                <div class="user-profile-icon"></div>
+            </header>
+            
+            <div class="content-scroll">
+                <div class="card progress-card">
+                    <div class="medal-container">
+                        <div class="medal">
+                            <span class="days-count">5</span>
+                            <span class="days-label">Dias</span>
+                        </div>
+                    </div>
+                    <div class="progress-info">
+                        <h3>Nível 3</h3>
+                        <p>Continue firme!</p>
+                    </div>
+                </div>
+
+                <div class="card chart-card">
+                    <h3>Progresso Mensal</h3>
+                    <div class="bar-chart">
+                        <!-- CSS Bars will go here -->
+                        <div class="bar" style="--height: 40%;" data-label="Jan"></div>
+                        <div class="bar" style="--height: 60%;" data-label="Fev"></div>
+                        <div class="bar" style="--height: 30%;" data-label="Mar"></div>
+                        <div class="bar" style="--height: 80%;" data-label="Abr"></div>
+                        <div class="bar" style="--height: 50%;" data-label="Mai"></div>
+                        <div class="bar" style="--height: 90%;" data-label="Jun"></div>
+                    </div>
+                </div>
+
+                <div class="card profile-card">
+                    <div class="profile-header">
+                        <div class="avatar-placeholder"></div>
+                        <div>
+                            <h3>Lucas Silva</h3>
+                            <p class="bio">Focado na recuperação um dia de cada vez.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journal View -->
+        <section id="journal-view" class="view">
+            <header class="top-bar">
+                <h2>Diário</h2>
+            </header>
+            <div class="content-scroll">
+                <div class="card">
+                    <h3>Juramento do Dia</h3>
+                    <form class="journal-form">
+                        <label>Recaiu hoje?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="relapse" value="no" checked> Não</label>
+                            <label><input type="radio" name="relapse" value="yes"> Sim</label>
+                        </div>
+                        
+                        <label>Como você está se sentindo?</label>
+                        <select class="input-field">
+                            <option>Muito bem</option>
+                            <option>Bem</option>
+                            <option>Normal</option>
+                            <option>Mal</option>
+                            <option>Péssimo</option>
+                        </select>
+
+                        <label>Gatilhos enfrentados:</label>
+                        <textarea class="input-field" rows="3" placeholder="Descreva se houve algum gatilho..."></textarea>
+                        
+                        <button type="button" class="btn btn-primary">Salvar Check-in</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>Registrar Recaída</h3>
+                    <form class="journal-form">
+                        <input type="date" class="input-field">
+                        <input type="time" class="input-field">
+                        <input type="text" class="input-field" placeholder="Local">
+                        <textarea class="input-field" rows="3" placeholder="Motivo"></textarea>
+                        <button type="button" class="btn btn-danger">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community View -->
+        <section id="community-view" class="view">
+            <header class="top-bar">
+                <h2>Comunidade</h2>
+            </header>
+            <div class="content-scroll">
+                <!-- Post 1 -->
+                <div class="card post-card">
+                    <div class="post-header">
+                        <div class="avatar-small"></div>
+                        <div class="post-meta">
+                            <span class="username">Ana Paula</span>
+                            <span class="date">2 horas atrás</span>
+                        </div>
+                    </div>
+                    <p class="post-text">Hoje completei 30 dias de sobriedade! Muito feliz com essa conquista. Obrigado a todos pelo apoio.</p>
+                    <button class="btn btn-text">Adicionar Comentário</button>
+                </div>
+                <!-- Post 2 -->
+                <div class="card post-card">
+                    <div class="post-header">
+                        <div class="avatar-small"></div>
+                        <div class="post-meta">
+                            <span class="username">Carlos Eduardo</span>
+                            <span class="date">5 horas atrás</span>
+                        </div>
+                    </div>
+                    <p class="post-text">Dia difícil hoje, mas me mantive forte. A caminhada matinal ajudou muito a clarear a mente.</p>
+                    <button class="btn btn-text">Adicionar Comentário</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map View -->
+        <section id="map-view" class="view">
+            <header class="top-bar">
+                <h2>Central de Apoio</h2>
+            </header>
+            <div class="content-scroll">
+                <div class="map-placeholder">
+                    <p>Mapa de Unidades</p>
+                    <!-- Simulated Map Background -->
+                </div>
+                <div class="locations-list">
+                    <div class="card location-card">
+                        <h3>Unidade Santa Cecília</h3>
+                        <p>Rua das Palmeiras, 123</p>
+                        <span class="distance">0.5 km</span>
+                    </div>
+                    <div class="card location-card">
+                        <h3>Unidade República</h3>
+                        <p>Praça da República, 45</p>
+                        <span class="distance">1.2 km</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary sticky-bottom-btn">Contate as unidades próximas</button>
+            </div>
+        </section>
+
+        <!-- Calendar View -->
+        <section id="calendar-view" class="view">
+            <header class="top-bar">
+                <h2>Calendário</h2>
+            </header>
+            <div class="content-scroll">
+                <div class="card calendar-card">
+                    <div class="calendar-grid">
+                        <!-- Simulated Calendar Days -->
+                        <div class="cal-day header">D</div><div class="cal-day header">S</div><div class="cal-day header">T</div><div class="cal-day header">Q</div><div class="cal-day header">Q</div><div class="cal-day header">S</div><div class="cal-day header">S</div>
+                        
+                        <div class="cal-day empty"></div><div class="cal-day empty"></div>
+                        <div class="cal-day sober">1</div><div class="cal-day sober">2</div><div class="cal-day sober">3</div><div class="cal-day sober">4</div><div class="cal-day sober">5</div>
+                        <div class="cal-day sober">6</div><div class="cal-day sober">7</div><div class="cal-day relapse">8</div><div class="cal-day sober">9</div><div class="cal-day sober">10</div><div class="cal-day sober">11</div><div class="cal-day sober">12</div>
+                        <div class="cal-day sober">13</div><div class="cal-day sober">14</div><div class="cal-day sober">15</div><div class="cal-day start">16</div><div class="cal-day sober">17</div><div class="cal-day sober">18</div><div class="cal-day sober">19</div>
+                        <div class="cal-day sober">20</div><div class="cal-day sober">21</div><div class="cal-day sober">22</div><div class="cal-day sober">23</div><div class="cal-day sober">24</div><div class="cal-day sober">25</div><div class="cal-day today">26</div>
+                    </div>
+                    <div class="calendar-legend">
+                        <div class="legend-item"><span class="dot sober"></span> Sóbrio</div>
+                        <div class="legend-item"><span class="dot relapse"></span> Recaída</div>
+                        <div class="legend-item"><span class="dot start"></span> Início</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <nav id="bottom-nav" class="hidden">
+        <button class="nav-item" data-target="community-view">
+            <span class="icon">👥</span>
+            <span class="label">Comunidade</span>
+        </button>
+        <button class="nav-item" data-target="journal-view">
+            <span class="icon">📖</span>
+            <span class="label">Diário</span>
+        </button>
+        <button class="nav-item active" data-target="home-view">
+            <span class="icon">🏠</span>
+            <span class="label">Início</span>
+        </button>
+        <button class="nav-item" data-target="map-view">
+            <span class="icon">📍</span>
+            <span class="label">Apoio</span>
+        </button>
+        <button class="nav-item" data-target="calendar-view">
+            <span class="icon">📅</span>
+            <span class="label">Calendário</span>
+        </button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
